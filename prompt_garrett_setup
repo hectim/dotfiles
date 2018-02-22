@@ -360,8 +360,8 @@ function prompt_garrett_setup {
   # Git verbose data (commit counts, etc.)
   zstyle ':prezto:module:git:info' verbose 'yes'
 
-  # Git prompt info.
-  zstyle ':prezto:module:git:info:branch'    format "${cyan} Î»${prompt_garrett_color_prompt}:${green}%b"
+# Git prompt info.
+  zstyle ':prezto:module:git:info:branch'    format "${cyan} λ${prompt_garrett_color_prompt}:${green}%b"
   zstyle ':prezto:module:git:info:remote'    format ""
   zstyle ':prezto:module:git:info:action'    format "${yellow} %s"
   zstyle ':prezto:module:git:info:position'  format "${red} %p"
