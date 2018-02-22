@@ -81,7 +81,7 @@ set wildignore+=*.png,*.jpg,*.gif
 
 " ================ Scrolling ========================
 
-set scrolloff=5         "Start scrolling when we're 8 lines away from margins
+set scrolloff=5         "Start scrolling when we're 5 lines away from margins
 set sidescrolloff=15
 set sidescroll=1
 
@@ -107,9 +107,9 @@ set smartindent
 set expandtab
 set backspace=indent,eol,start
 
-" vertical lines
-let g:indentLine_color_term = 239
-let g:indentLine_char = '|'
+" 256 color
+set term=xterm-256color 
+set t_Co=256        " use 256 colors
 
 " easymotion
 map <Leader>h <Plug>(easymotion-linebackward)
@@ -158,7 +158,7 @@ let g:gitgutter_sign_modified_removed = '🛎️'
 let g:gitgutter_signs = 1
 
 " theme
-" colorscheme iceberg
+colorscheme iceberg
 
 " " Use correct language for spellcheck (cos to toggle; z= for corrections).
 " set spelllang=en_gb
@@ -172,7 +172,6 @@ let g:gitgutter_signs = 1
 " augroup is used to prevent a buildup of autocmd's whenever .vimrc is sourced
 augroup autocmds
   autocmd FileType go setlocal shiftwidth=2 softtabstop=0 tabstop=2 noexpandtab
-  autocmd VimEnter * colorscheme iceberg " so stupid
   "autocmd! " clear the augroup. if this isn't done often vim will be slowed down
   " spell check for text files
   "  autocmd BufNewFile,BufRead *.txt,*.md,*.markdown,*.rst setlocal spell

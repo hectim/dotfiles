@@ -18,6 +18,9 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 " Core plugins
 NeoBundle 'easymotion/vim-easymotion'
 NeoBundle 'Yggdroot/indentLine'
+  " vertical lines
+  let g:indentLine_char = '|'
+
 NeoBundle 'itchyny/lightline.vim' " colorscheme
 NeoBundle 'airblade/vim-gitgutter'
 
