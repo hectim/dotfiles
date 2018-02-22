@@ -1,0 +1,11 @@
+#!/bin/bash
+
+cp ~/.vimrc  vimrc
+cp ~/.vim/colors/iceberg.vim iceberg.vim
+cp ~/.vim/neobundle.vim neobundle.vim
+cp ~/.zpreztorc  zpreztorc
+cp ~/.zshrc  zshrc
+cp ~/.zprezto/modules/prompt/functions/prompt_garrett_setup  prompt_garrett_setup
+cp ~/.gitignore gitignore_global
+cp ~/.gitconfig gitconfig_global
+
