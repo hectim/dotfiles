@@ -8,10 +8,10 @@ fi
 eval "$(fasd --init posix-alias zsh-hook)"
 # autosuggestions
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+# export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=white'
+
 #bazel to path
 export PATH=$HOME/bin:/usr/local/bin:$PATH
-# vscode to path
-export PATH=/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/:$PATH
 # go to path
 export GOPATH=~/Documents/go
 export GOBIN=$GOPATH/bin:$GOBIN

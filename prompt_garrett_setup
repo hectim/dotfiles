@@ -311,7 +311,7 @@ function prompt_garrett_setup {
     # Set style.
     eval prompt_garrett_user=''
     eval prompt_garrett_host='${prompt_garrett_color_host}%m' # hostname up to first . (dot) (use %M for full hostname)
-    eval prompt_garrett_location='${prompt_garrett_user}${cyan}@${prompt_garrett_host}' # user@host.name
+    eval prompt_garrett_location='${red}βραδψ' #'${prompt_garrett_user}${cyan}@${prompt_garrett_host}' # user@host.name
   fi
 
   #
@@ -391,15 +391,6 @@ function prompt_garrett_setup {
     'local_status'   "%C%D%a%d%m%r%U%u" \
     'remote_status'  "%B%A%S" \
     'sha'            "%c" \
-
-  #
-  # Report Ruby version.
-  #   %v | ruby version
-  #
-
-  #zstyle ':prezto:module:node:info:version' format "${yellow}node:%v "
-  zstyle ':prezto:module:node:info:version' format 'version:%v'
-  # zstyle ':prezto:module:ruby:info:version' format "${yellow}ruby:%v "
 
   #
   # Command line editor info.
