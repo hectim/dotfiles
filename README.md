@@ -13,4 +13,11 @@
       ln -s "$rcfile" "${ZDOTDIR:-$HOME}/.${rcfile:t}"
     done
   ```
-+ run our install script which copies over dot files and themes
+
+
+```
+./install
+```
+
++ bask in the symlinked glory
++ commit changes often
