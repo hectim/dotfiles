@@ -1,0 +1,22 @@
+#!/bin/bash
+
+FILES=(
+  ~/.vimrc
+  ~/.vim/colors/iceberg.vim
+  ~/.vim/neobundle.vim
+  ~/.zpreztorc
+  ~/.zshrc
+  ~/.zprezto/modules/prompt/functions/prompt_garrett_setup
+  ~/.gitignore_global
+  ~/.gitconfig
+)
+
+for i in "${FILES[@]}"
+do
+  # if [ -f $i ]; then
+  #   echo $i
+    cp -LRH $i local-backup/"$(echo $i | sed 's/.*\///')" # back up locally
+    rm $i # remove to make room for link
+  # fi
+  ln -s $(pwd)/"$(echo $i | sed 's/.*\///')" $i
+done
