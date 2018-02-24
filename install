@@ -11,10 +11,12 @@ FILES=(
   ~/.gitconfig
 )
 
-for i in "${FILES[@]}"
+mkdir -p local-backup                                     # make backup folder
+
+for i in "${FILES[@]}"                                    # loop through files
 do
   if [ -e $i ]; then
-    cp -LRH $i local-backup/"$(echo $i | sed 's/.*\///')" # back up locally just in case
+    cp -LRH $i local-backup/"$(echo $i | sed 's/.*\///')" # backup locally just in case
     rm $i                                                 # remove to make room for link
   fi
   ln -s $(pwd)/"$(echo $i | sed 's/.*\///')" $i           # symlink to this repo
