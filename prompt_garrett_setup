@@ -324,7 +324,7 @@ function prompt_garrett_setup {
   # Report local time.
   #
 
-  eval prompt_garrett_current_time='${green}%T'    # 24 hour time format
+  eval prompt_garrett_current_time='${green}%t'    # 24 hour time format
   # eval prompt_garrett_current_time='${green}%*'    # 24 hour time format, second precise
   # eval prompt_garrett_current_time='${green}%t'    # AM/PM time format
 

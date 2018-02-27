@@ -11,7 +11,7 @@ source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 # export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=white'
 
 #bazel to path
-export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=$HOME/bin:/usr/local/bin:/usr/local/lib:/usr/local/lib/node_modules:/usr/local/sbin:/usr/local/bin/sh:$PATH
 # go to path
 export GOPATH=~/Documents/go
 export GOBIN=$GOPATH/bin:$GOBIN
@@ -80,5 +80,5 @@ bindkey -M viins ' ' magic-space
 bindkey 'kk' autosuggest-accept
 bindkey 'jj' autosuggest-execute
 
-## create chrome alias
-alias chrome="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome"
+alias lsd="ls -a"
+alias v='f -e vim'
