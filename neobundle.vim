@@ -38,6 +38,8 @@ NeoBundle 'godlygeek/tabular'
 NeoBundle 'luochen1990/rainbow'
 NeoBundle 'editorconfig/editorconfig-vim'
 NeoBundle 'Shougo/vimproc.vim'
+NeoBundle 'tpope/vim-commentary'
+NeoBundle 'tpope/vim-repeat'
 
 " Required:
 call neobundle#end()
