@@ -23,6 +23,7 @@ NeoBundle 'Yggdroot/indentLine'
 
 NeoBundle 'itchyny/lightline.vim' " colorscheme
 NeoBundle 'airblade/vim-gitgutter'
+NeoBundle 'ntpeters/vim-better-whitespace' " whitespace
 
 " Node
 NeoBundleLazy 'jelera/vim-javascript-syntax', {'autoload':{'filetypes':['javascript']}}
@@ -31,13 +32,10 @@ NeoBundleLazy 'jelera/vim-javascript-syntax', {'autoload':{'filetypes':['javascr
 NeoBundleLazy 'fatih/vim-go', {'autoload':{'filetypes':['go']}}
 
 " Other
-NeoBundle 'editorconfig/editorconfig-vim'
 NeoBundle 'godlygeek/tabular'
 
 " Utils
 NeoBundle 'luochen1990/rainbow'
-NeoBundle 'editorconfig/editorconfig-vim'
-NeoBundle 'Shougo/vimproc.vim'
 NeoBundle 'tpope/vim-commentary'
 NeoBundle 'tpope/vim-repeat'
 

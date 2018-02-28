@@ -53,10 +53,16 @@ filetype plugin on
 filetype indent on
 
 " Display tabs and trailing spaces visually
-set list listchars=tab:\ \ ,trail:·
+" set list listchars=tab:\ \ ,trail:·
+
+" Strip whitespace on save
+let g:better_whitespace_enabled=1
+let g:strip_whitespace_on_save=1
 
 " set nowrap     "Don't wrap lines
 set linebreak    "Wrap lines at convenient points
+
+set showbreak=>\ \ \
 
 " ================ Folds ============================
 

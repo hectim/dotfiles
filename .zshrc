@@ -16,6 +16,8 @@ export PATH=$HOME/bin:/usr/local/bin:/usr/local/lib:/usr/local/lib/node_modules:
 export GOPATH=~/Documents/go
 export GOBIN=$GOPATH/bin:$GOBIN
 export PATH=/usr/local/go/bin:$GOBIN:$PATH
+# node from brew
+export PATH=/usr/local/opt/node@8/bin:$PATH
 # protoc to path
 export LD_LIBRARY_PATH=/usr/local/lib
 # create chrome alias
