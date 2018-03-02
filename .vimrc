@@ -114,12 +114,15 @@ set expandtab
 set backspace=indent,eol,start
 
 " 256 color
-set term=xterm-256color 
+set term=xterm-256color
 set t_Co=256        " use 256 colors
 
 " easymotion
-map <Leader>h <Plug>(easymotion-linebackward)
 map <Leader>l <Plug>(easymotion-lineforward)
+map <Leader>h <Plug>(easymotion-linebackward)
+map <Leader>s <Plug>(easymotion-s)
+map <Leader>j <Plug>(easymotion-j)
+map <Leader>k <Plug>(easymotion-k)
 
 
 " tablularize
