@@ -14,7 +14,7 @@ source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 export PATH=$HOME/bin:/usr/local/bin:/usr/local/lib:/usr/local/lib/node_modules:/usr/local/sbin:/usr/local/bin/sh:$PATH
 # go to path
 export GOPATH=~/Documents/go
-export GOBIN=$GOPATH/bin:$GOBIN
+export GOBIN=$GOPATH/bin
 export PATH=/usr/local/go/bin:$GOBIN:$PATH
 # node from brew
 export PATH=/usr/local/opt/node@8/bin:$PATH
@@ -22,7 +22,7 @@ export PATH=/usr/local/opt/node@8/bin:$PATH
 export LD_LIBRARY_PATH=/usr/local/lib
 # create chrome alias
 alias chrome="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome"
-# gcloud to path 
+# gcloud to path
 # source /Users/colton/google-cloud-sdk/path.zsh.inc
 # gcloud zsh completiton
 
