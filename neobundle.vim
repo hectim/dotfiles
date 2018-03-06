@@ -26,10 +26,18 @@ NeoBundle 'airblade/vim-gitgutter'
 NeoBundle 'ntpeters/vim-better-whitespace' " whitespace
 
 " Node
-NeoBundleLazy 'jelera/vim-javascript-syntax', {'autoload':{'filetypes':['javascript']}}
+NeoBundle 'jelera/vim-javascript-syntax', {'autoload':{'filetypes':['javascript']}}
+
+" Javascript
+NeoBundle 'pangloss/vim-javascript'
+NeoBundle 'mxw/vim-jsx'
 
 " Go
-NeoBundleLazy 'fatih/vim-go', {'autoload':{'filetypes':['go']}}
+NeoBundle 'fatih/vim-go', {'autoload':{'filetypes':['go']}}
+
+" Typescript
+NeoBundle 'leafgarland/typescript-vim'
+NeoBundle 'ianks/vim-tsx'
 
 " Other
 NeoBundle 'godlygeek/tabular'

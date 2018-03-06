@@ -166,6 +166,10 @@ let g:gitgutter_sign_removed_first_line = '🥇'
 let g:gitgutter_sign_modified_removed = '🛎️'
 let g:gitgutter_signs = 1
 
+" typescript
+" let g:typescript_compiler_binary = 'tsc'
+" let g:typescript_compiler_options = ''
+
 " theme
 colorscheme iceberg
 
@@ -181,6 +185,7 @@ colorscheme iceberg
 " augroup is used to prevent a buildup of autocmd's whenever .vimrc is sourced
 augroup autocmds
   autocmd FileType go setlocal shiftwidth=2 softtabstop=0 tabstop=2 noexpandtab
+  autocmd BufNewFile,BufRead *.ts,*.tsx setlocal filetype=typescript.tsx
   "autocmd! " clear the augroup. if this isn't done often vim will be slowed down
   " spell check for text files
   "  autocmd BufNewFile,BufRead *.txt,*.md,*.markdown,*.rst setlocal spell
@@ -191,4 +196,4 @@ augroup autocmds
   " Set conceallevel=0 for every filetype. Conceallevel really is dumb, I hate that ishhhhh
   set cole=0
   autocmd FileType * setl cole=0
-augroup END
+augroup EN
