@@ -196,4 +196,4 @@ augroup autocmds
   " Set conceallevel=0 for every filetype. Conceallevel really is dumb, I hate that ishhhhh
   set cole=0
   autocmd FileType * setl cole=0
-augroup EN
+augroup END
