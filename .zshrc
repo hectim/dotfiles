@@ -82,5 +82,7 @@ bindkey -M viins ' ' magic-space
 bindkey 'kk' autosuggest-accept
 bindkey 'jj' autosuggest-execute
 
-alias lsd="ls -a"
-alias v='f -e vim'
+alias lsd='ls -a'           # because I mistype this all the time
+alias v='f -e vim'          # nice filesystem search to open vim
+alias rm='rm -f'            # when I hit return, I expect a response not a question
+alias count='ls -l | wc -l' # count how many ls entries are returned
