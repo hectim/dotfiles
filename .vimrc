@@ -4,7 +4,7 @@ source ~/.vim/neobundle.vim " Pull some dank plugins
 " This must be first, because it changes other options as a side effect.
 set nocompatible
 
-set background=dark
+set background=light
 
 " ================ General Config ====================
 
@@ -166,7 +166,7 @@ let g:gitgutter_signs = 1
 " let g:typescript_compiler_options = ''
 
 " theme
-colorscheme iceberg
+colorscheme solarized
 
 " attempt
 set backupcopy=no

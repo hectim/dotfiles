@@ -1,7 +1,6 @@
 # Steps
 
 + iterm
-  * import iceberg profile theme
 + neobundle
 + zsh
   * [install zsh autosuggest](https://github.com/zsh-users/zsh-autosuggestions)
