@@ -17,13 +17,16 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 
 " Core plugins
 NeoBundle 'easymotion/vim-easymotion'
-NeoBundle 'Yggdroot/indentLine'
-  " vertical lines
-  let g:indentLine_char = '|'
-
+NeoBundle 'nathanaelkane/vim-indent-guides'
+  let g:indent_guides_enable_on_vim_startup = 1 " enable on startup
+  let g:indent_guides_auto_colors = 0
+  "autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=black ctermbg=0 " black
+  autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=black ctermbg=8 " darkgray
 NeoBundle 'itchyny/lightline.vim' " colorscheme
 NeoBundle 'airblade/vim-gitgutter'
 NeoBundle 'ntpeters/vim-better-whitespace' " whitespace
+  let g:better_whitespace_enabled=1
+  let g:strip_whitespace_on_save=1
 
 " Node
 NeoBundle 'jelera/vim-javascript-syntax', {'autoload':{'filetypes':['javascript']}}
@@ -46,6 +49,7 @@ NeoBundle 'godlygeek/tabular'
 NeoBundle 'luochen1990/rainbow'
 NeoBundle 'tpope/vim-commentary'
 NeoBundle 'tpope/vim-repeat'
+NeoBundle 'tpope/vim-fugitive'
 
 " Required:
 call neobundle#end()

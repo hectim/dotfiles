@@ -4,6 +4,8 @@ source ~/.vim/neobundle.vim " Pull some dank plugins
 " This must be first, because it changes other options as a side effect.
 set nocompatible
 
+set background=dark
+
 " ================ General Config ====================
 
 set backspace=indent,eol,start  "Allow backspace in insert mode
@@ -51,13 +53,6 @@ nnoremap P P=`]<C-o>
 
 filetype plugin on
 filetype indent on
-
-" Display tabs and trailing spaces visually
-" set list listchars=tab:\ \ ,trail:·
-
-" Strip whitespace on save
-let g:better_whitespace_enabled=1
-let g:strip_whitespace_on_save=1
 
 " set nowrap     "Don't wrap lines
 set linebreak    "Wrap lines at convenient points
@@ -172,6 +167,9 @@ let g:gitgutter_signs = 1
 
 " theme
 colorscheme iceberg
+
+" attempt
+set backupcopy=no
 
 " " Use correct language for spellcheck (cos to toggle; z= for corrections).
 " set spelllang=en_gb
