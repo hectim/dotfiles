@@ -4,7 +4,7 @@ source ~/.vim/neobundle.vim " Pull some dank plugins
 " This must be first, because it changes other options as a side effect.
 set nocompatible
 
-set background=light
+set background=dark
 
 " ================ General Config ====================
 
@@ -166,7 +166,7 @@ let g:gitgutter_signs = 1
 " let g:typescript_compiler_options = ''
 
 " theme
-colorscheme solarized
+colorscheme iceberg
 
 " attempt
 set backupcopy=no
@@ -184,14 +184,7 @@ set backupcopy=no
 augroup autocmds
   autocmd FileType go setlocal shiftwidth=2 softtabstop=0 tabstop=2 noexpandtab
   autocmd BufNewFile,BufRead *.ts,*.tsx setlocal filetype=typescript.tsx
-  "autocmd! " clear the augroup. if this isn't done often vim will be slowed down
-  " spell check for text files
-  "  autocmd BufNewFile,BufRead *.txt,*.md,*.markdown,*.rst setlocal spell
-  " press f5 and open a markdown file into google chrome.
-  " Requires: https://chrome.google.com/webstore/detail/markdown-preview-plus/febilkbfcbhebfnokafefeacimjdckgl
-  " Check "Allow access to file URLs in chrome://extensions
-  " autocmd FileType gitcommit setlocal spell
-  " Set conceallevel=0 for every filetype. Conceallevel really is dumb, I hate that ishhhhh
   set cole=0
   autocmd FileType * setl cole=0
+  autocmd FileType cpp,cc setlocal commentstring=\/\/\ %s
 augroup END
