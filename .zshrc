@@ -10,6 +10,9 @@ eval "$(fasd --init posix-alias zsh-hook)"
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 # export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=white'
 
+# homebrew install thefuck
+eval $(thefuck --alias)
+
 #bazel to path
 export PATH=$HOME/bin:/usr/local/bin:/usr/local/lib:/usr/local/lib/node_modules:/usr/local/sbin:/usr/local/bin/sh:$PATH
 # go to path
@@ -81,8 +84,15 @@ bindkey -M viins ' ' magic-space
 # ctry f to accept autosuggest. use autosuggest-execute to accept and execute in one command
 bindkey 'kk' autosuggest-accept
 bindkey 'jj' autosuggest-execute
+bindkey 'hh' forward-word
 
 alias lsd='ls -a'           # because I mistype this all the time
 alias v='f -e vim'          # nice filesystem search to open vim
 alias rm='rm -f'            # when I hit return, I expect a response not a question
 alias count='ls -l | wc -l' # count how many ls entries are returned
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/bready/Documents/google-cloud-sdk/path.zsh.inc' ]; then source '/Users/bready/Documents/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/bready/Documents/google-cloud-sdk/completion.zsh.inc' ]; then source '/Users/bready/Documents/google-cloud-sdk/completion.zsh.inc'; fi

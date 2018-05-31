@@ -50,6 +50,12 @@ NeoBundle 'luochen1990/rainbow'
 NeoBundle 'tpope/vim-commentary'
 NeoBundle 'tpope/vim-repeat'
 NeoBundle 'tpope/vim-fugitive'
+NeoBundle 'shumphrey/fugitive-gitlab.vim' " gitlab plugin for vim-fugitive
+let g:fugitive_gitlab_domains = ['http://git', 'http://git.tcncloud.net'] " for private gitlab domains
+
+" Log
+NeoBundle 'dzeban/vim-log-syntax'
+NeoBundle 'vim-scripts/AnsiEsc.vim'
 
 " Required:
 call neobundle#end()
