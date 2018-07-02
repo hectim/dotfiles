@@ -39,6 +39,9 @@ alias chrome="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome"
 # add homebrew to the completion path
 fpath=("/usr/local/bin/" $fpath)
 
+# protoc to path
+export LD_LIBRARY_PATH=/usr/local/lib
+
 # stop typing cd
 setopt AUTO_CD
 # Now we can pipe to multiple outputs!
@@ -91,6 +94,7 @@ alias lsd='ls -a'           # because I mistype this all the time
 alias v='f -e vim'          # nice filesystem search to open vim
 alias rm='rm -f'            # when I hit return, I expect a response not a question
 alias count='ls -l | wc -l' # count how many ls entries are returned
+alias start='npm start'     # common usecase
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/bready/Documents/google-cloud-sdk/path.zsh.inc' ]; then source '/Users/bready/Documents/google-cloud-sdk/path.zsh.inc'; fi

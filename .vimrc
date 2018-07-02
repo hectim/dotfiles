@@ -186,5 +186,10 @@ augroup autocmds
   autocmd BufNewFile,BufRead *.ts,*.tsx setlocal filetype=typescript.tsx
   set cole=0
   autocmd FileType * setl cole=0
+
+  " press f5 and open a markdown file into google chrome.
+  " Requires: https://chrome.google.com/webstore/detail/markdown-preview-plus/febilkbfcbhebfnokafefeacimjdckgl
+  " Check "Allow access to file URLs in chrome://extensions
+  autocmd BufEnter *.md exe 'noremap <F5> :!open -a "Google Chrome" %:p:.<CR>'
   autocmd FileType cpp,cc setlocal commentstring=\/\/\ %s
 augroup END
