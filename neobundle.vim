@@ -47,9 +47,10 @@ NeoBundle 'godlygeek/tabular'
 
 " Utils
 NeoBundle 'luochen1990/rainbow'
-NeoBundle 'tpope/vim-commentary'
-NeoBundle 'tpope/vim-repeat'
-NeoBundle 'tpope/vim-fugitive'
+NeoBundle 'tpope/vim-commentary' " gc for commenting sections
+NeoBundle 'tpope/vim-repeat'     " smarter dot command
+NeoBundle 'tpope/vim-fugitive'   " git wrapper in vim
+NeoBundle 'tpope/vim-surround'   " cs/ds quote manipulation
 NeoBundle 'shumphrey/fugitive-gitlab.vim' " gitlab plugin for vim-fugitive
 let g:fugitive_gitlab_domains = ['http://git', 'http://git.tcncloud.net'] " for private gitlab domains
 
