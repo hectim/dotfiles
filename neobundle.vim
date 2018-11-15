@@ -28,6 +28,10 @@ NeoBundle 'ntpeters/vim-better-whitespace' " whitespace
   let g:better_whitespace_enabled=1
   let g:strip_whitespace_on_save=1
 
+" editor config for syntax
+NeoBundle 'editorconfig/editorconfig-vim'
+let g:EditorConfig_exclude_patterns = ['fugitive://.*'] " makes fugitive work with this plugin
+
 " Node
 NeoBundle 'jelera/vim-javascript-syntax', {'autoload':{'filetypes':['javascript']}}
 

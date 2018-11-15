@@ -90,6 +90,7 @@ bindkey 'jj' autosuggest-execute
 bindkey 'hh' forward-word
 
 alias gitp='git'            # seriously this is insane
+alias gi='git'              # seriously this is insane
 alias lsd='ls -a'           # because I mistype this all the time
 alias v='f -e vim'          # nice filesystem search to open vim
 alias rm='rm -f'            # when I hit return, I expect a response not a question
@@ -103,3 +104,4 @@ if [ -f '/Users/bready/Documents/google-cloud-sdk/path.zsh.inc' ]; then source '
 if [ -f '/Users/bready/Documents/google-cloud-sdk/completion.zsh.inc' ]; then source '/Users/bready/Documents/google-cloud-sdk/completion.zsh.inc'; fi
 
 export neo=/Users/bready/Documents/go/src/git.tcncloud.net/m/neo
+export genstate=/Users/brady/Documents/go/src/github.com/tcncloud/protoc-gen-state

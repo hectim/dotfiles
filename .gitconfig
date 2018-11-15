@@ -90,6 +90,12 @@
   svnr = svn rebase
   svnd = svn dcommit
   svnl = svn log --oneline --show-commit
+
+  # insanity
+  ush = "push"
+  ull = "pull"
+  tpush = "push"
+  tpull = "pull"
 [format]
   pretty = format:%C(blue)%ad%Creset %C(yellow)%h%C(green)%d%Creset %C(blue)%s %C(magenta) [%an]%Creset
 [mergetool]
@@ -128,4 +134,9 @@
   path = .gitconfig.user
 [user]
 	name = Brady Killeen
-	email = brady.killeen@tcnbroadcasting.com # work
+	email = brady.killeen@tcnbroadcasting.com
+[filter "lfs"]
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
