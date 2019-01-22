@@ -14,13 +14,13 @@ source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 eval $(thefuck --alias)
 
 #bazel to path
-export PATH=$HOME/bin:/usr/local/bin:/usr/local/lib:/usr/local/lib/node_modules:/usr/local/sbin:/usr/local/bin/sh:$PATH
+# export PATH=/usr/local/lib:/usr/local/lib/node_modules:/usr/local/sbin:/usr/local/bin/sh:$PATH
 # go to path
-export GOPATH=~/Documents/go
+export GOPATH=$HOME/go
 export GOBIN=$GOPATH/bin
-export PATH=/usr/local/go/bin:$GOBIN:$PATH
+export PATH=$HOME/bin:/usr/local/opt/node@8/bin:/usr/local/bin:/usr/local/lib/node_modules:/usr/local/bin/sh:/usr/local/lib:/usr/local/sbin:/usr/local/lib/node_modules:$GOBIN:$PATH
 # node from brew
-export PATH=/usr/local/opt/node@8/bin:$PATH
+# export PATH=/usr/local/opt/node@8/bin:$PATH
 # protoc to path
 export LD_LIBRARY_PATH=/usr/local/lib
 # create chrome alias
@@ -102,6 +102,3 @@ if [ -f '/Users/bready/Documents/google-cloud-sdk/path.zsh.inc' ]; then source '
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/bready/Documents/google-cloud-sdk/completion.zsh.inc' ]; then source '/Users/bready/Documents/google-cloud-sdk/completion.zsh.inc'; fi
-
-export neo=/Users/bready/Documents/go/src/git.tcncloud.net/m/neo
-export genstate=/Users/brady/Documents/go/src/github.com/tcncloud/protoc-gen-state
