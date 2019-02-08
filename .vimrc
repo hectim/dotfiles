@@ -139,6 +139,13 @@ nmap <Leader>a<Bar>  :Tabularize /<Bar><CR>
 vmap <Leader>a<Bar>  :Tabularize /<Bar><CR>
 
 " Javascript linting
+let g:ale_sign_column_always = 1
+let g:ale_fix_on_save = 1
+let g:ale_set_highlights = 0
+let g:ale_fixers = {
+\ 'javascript': ['eslint'],
+\ 'typescript': ['tslint'],
+\}
 let g:ale_linters = {
 \ 'javascript': ['eslint'],
 \ 'typescript': ['tslint'],
@@ -167,10 +174,6 @@ let g:gitgutter_sign_modified = '✏️ '
 let g:gitgutter_sign_removed_first_line = '🥇'
 let g:gitgutter_sign_modified_removed = '🛎️'
 let g:gitgutter_signs = 1
-
-" typescript
-" let g:typescript_compiler_binary = 'tsc'
-" let g:typescript_compiler_options = ''
 
 " theme
 colorscheme iceberg
