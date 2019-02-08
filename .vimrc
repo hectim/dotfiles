@@ -138,6 +138,13 @@ vmap <Leader>a,,     :Tabularize /,\zs<CR>
 nmap <Leader>a<Bar>  :Tabularize /<Bar><CR>
 vmap <Leader>a<Bar>  :Tabularize /<Bar><CR>
 
+" Javascript linting
+let g:ale_linters = {
+\ 'javascript': ['eslint'],
+\ 'typescript': ['tslint'],
+\ 'typescript.tsx': ['tslint'],
+\}
+
 " Tell vim to remember certain things when we exit
 "  '10  :  marks will be remembered for up to 10 previously edited files
 "  "100 :  will save up to 100 lines for each register

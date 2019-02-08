@@ -46,6 +46,9 @@ NeoBundle 'fatih/vim-go', {'autoload':{'filetypes':['go']}}
 NeoBundle 'leafgarland/typescript-vim'
 NeoBundle 'ianks/vim-tsx'
 
+" Linter
+NeoBundle 'w0rp/ale'
+
 " Other
 NeoBundle 'godlygeek/tabular'
 
