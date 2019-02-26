@@ -47,10 +47,6 @@ set softtabstop=2
 set tabstop=2
 set expandtab
 
-" Auto indent pasted text
-nnoremap p p=`]<C-o>
-nnoremap P P=`]<C-o>
-
 filetype plugin on
 filetype indent on
 
@@ -120,7 +116,7 @@ map <Leader>j <Plug>(easymotion-j)
 map <Leader>k <Plug>(easymotion-k)
 
 
-" tablularize
+" tabularize
 nmap <Leader>a&      :Tabularize /&<CR>
 vmap <Leader>a&      :Tabularize /&<CR>
 nmap <Leader>a=      :Tabularize /^[^=]*\zs=<CR>
@@ -138,9 +134,14 @@ vmap <Leader>a,,     :Tabularize /,\zs<CR>
 nmap <Leader>a<Bar>  :Tabularize /<Bar><CR>
 vmap <Leader>a<Bar>  :Tabularize /<Bar><CR>
 
+" jump between linter errors
+nmap <silent> <C-e> <Plug>(ale_previous_wrap)
+nmap <silent> <C-r> <Plug>(ale_next_wrap)
+
 " Javascript linting
+let g:ale_lint_on_text_changed = 'never'
 let g:ale_sign_column_always = 1
-let g:ale_fix_on_save = 1
+let g:ale_fix_on_save = 0
 let g:ale_set_highlights = 0
 let g:ale_fixers = {
 \ 'javascript': ['eslint'],
@@ -148,8 +149,6 @@ let g:ale_fixers = {
 \}
 let g:ale_linters = {
 \ 'javascript': ['eslint'],
-\ 'typescript': ['tslint'],
-\ 'typescript.tsx': ['tslint'],
 \}
 
 " Tell vim to remember certain things when we exit

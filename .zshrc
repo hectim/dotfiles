@@ -96,6 +96,7 @@ alias v='f -e vim'          # nice filesystem search to open vim
 alias rm='rm -f'            # when I hit return, I expect a response not a question
 alias count='ls -l | wc -l' # count how many ls entries are returned
 alias start='npm start'     # common usecase
+alias devdb='kubectl exec admin-0 -it psql -- -h skunkdb -U skunk -W skunk'
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/bready/Documents/google-cloud-sdk/path.zsh.inc' ]; then source '/Users/bready/Documents/google-cloud-sdk/path.zsh.inc'; fi
