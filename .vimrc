@@ -45,7 +45,7 @@ set smarttab
 set shiftwidth=2
 set softtabstop=2
 set tabstop=2
-set expandtab
+set noexpandtab
 
 filetype plugin on
 filetype indent on
@@ -149,6 +149,10 @@ let g:ale_fixers = {
 \}
 let g:ale_linters = {
 \ 'javascript': ['eslint'],
+\}
+let g:ale_pattern_options = {
+\ '.*\.ts$': {'ale_enabled': 1},
+\ '.*\.tsx$': {'ale_enabled': 1},
 \}
 
 " Tell vim to remember certain things when we exit
