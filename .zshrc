@@ -18,13 +18,18 @@ eval $(thefuck --alias)
 # go to path
 export GOPATH=$HOME/go
 export GOBIN=$GOPATH/bin
-export PATH=$HOME/bin:/usr/local/opt/node@8/bin:/usr/local/bin:/usr/local/lib/node_modules:/usr/local/bin/sh:/usr/local/lib:/usr/local/sbin:/usr/local/lib/node_modules:$GOBIN:$PATH
+export PATH=$HOME/bin:/usr/local/opt/node@8/bin:/usr/local/bin:/usr/local/lib/node_modules:/usr/local/bin/sh:/usr/local/lib:/usr/local/sbin:/usr/local/lib/node_modules:$GOBIN:~/.please:$PATH
 # node from brew
 # export PATH=/usr/local/opt/node@8/bin:$PATH
 # protoc to path
 export LD_LIBRARY_PATH=/usr/local/lib
 # create chrome alias
 alias chrome="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome"
+
+#please
+export PATH=$HOME/.please/:$PATH
+source <(plz --completion_script)
+
 # gcloud to path
 # source /Users/colton/google-cloud-sdk/path.zsh.inc
 # gcloud zsh completiton
@@ -103,3 +108,6 @@ if [ -f '/Users/bready/Documents/google-cloud-sdk/path.zsh.inc' ]; then source '
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/bready/Documents/google-cloud-sdk/completion.zsh.inc' ]; then source '/Users/bready/Documents/google-cloud-sdk/completion.zsh.inc'; fi
+
+# code servers
+# ssh c.sgu

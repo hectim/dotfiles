@@ -50,9 +50,9 @@ set noexpandtab
 filetype plugin on
 filetype indent on
 
-" set nowrap     "Don't wrap lines
+"set nowrap     "Don't wrap lines
 set linebreak    "Wrap lines at convenient points
-
+set tw=0 wm=0    "Stop the auto return after column 80
 set showbreak=>\ \ \
 
 " ================ Folds ============================
@@ -138,6 +138,9 @@ vmap <Leader>a<Bar>  :Tabularize /<Bar><CR>
 nmap <silent> <C-e> <Plug>(ale_previous_wrap)
 nmap <silent> <C-r> <Plug>(ale_next_wrap)
 
+" gopls is annoying sometimes
+let g:go_null_module_warning = 0
+
 " Javascript linting
 let g:ale_lint_on_text_changed = 'never'
 let g:ale_sign_column_always = 1
@@ -148,12 +151,12 @@ let g:ale_fixers = {
 \ 'typescript': ['tslint'],
 \}
 let g:ale_linters = {
-\ 'javascript': ['eslint'],
+\ 'javascript': ['tslint'],
 \}
-let g:ale_pattern_options = {
-\ '.*\.ts$': {'ale_enabled': 1},
-\ '.*\.tsx$': {'ale_enabled': 1},
-\}
+" let g:ale_pattern_options = {
+" \ '.*\.ts$': {'ale_enabled': 1},
+" \ '.*\.tsx$': {'ale_enabled': 1},
+" \}
 
 " Tell vim to remember certain things when we exit
 "  '10  :  marks will be remembered for up to 10 previously edited files
@@ -184,19 +187,11 @@ colorscheme iceberg
 " attempt
 set backupcopy=no
 
-" " Use correct language for spellcheck (cos to toggle; z= for corrections).
-" set spelllang=en_gb
-" " Allow <C-n> and <C-p> to use the dictionary for recommended words.
-" set spell
-" set complete+=kspell
-" " Only spell check SpellLocal and SpellBad (use :h hl-SpellBad)
-" hi clear SpellCap
-" hi clear SpellRare
-
 " augroup is used to prevent a buildup of autocmd's whenever .vimrc is sourced
 augroup autocmds
   autocmd FileType go setlocal shiftwidth=2 softtabstop=0 tabstop=2 noexpandtab
   autocmd BufNewFile,BufRead *.ts,*.tsx setlocal filetype=typescript.tsx
+  autocmd BufNewFile,BufRead *.build_defs,*.plz setlocal filetype=python.py
   set cole=0
   autocmd FileType * setl cole=0
 
