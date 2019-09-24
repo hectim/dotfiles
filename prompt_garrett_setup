@@ -81,10 +81,10 @@ function prompt_showSpotifyStatus {
     track=`osascript -e 'tell application "Spotify" to name of current track as string'`;
 
     # echo -n "%{$green%} $artist - $track \uf885 " ;
-    _prompt_showSpotifyStatus="[${blue}$artist ${grey}○ ${green}$track]"
+    _prompt_showSpotifyStatus="${grey}[${blue}$artist ${grey}○ ${green}$track${grey}]"
 
   else
-    _prompt_showSpotifyStatus="--"
+    _prompt_showSpotifyStatus=""
   fi
 }
 
