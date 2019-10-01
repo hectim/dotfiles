@@ -18,7 +18,7 @@ eval $(thefuck --alias)
 # go to path
 export GOPATH=$HOME/go
 export GOBIN=$GOPATH/bin
-export PATH=$HOME/bin:/usr/local/opt/node@8/bin:/usr/local/bin:/usr/local/lib/node_modules:/usr/local/bin/sh:/usr/local/lib:/usr/local/sbin:/usr/local/lib/node_modules:$GOBIN:~/.please:$PATH
+export PATH=$HOME/bin:/usr/local/opt/node@10/bin:/usr/local/bin:/usr/local/lib/node_modules:/usr/local/bin/sh:/usr/local/lib:/usr/local/sbin:/usr/local/lib/node_modules:$GOBIN:~/.please:$PATH
 # node from brew
 # export PATH=/usr/local/opt/node@8/bin:$PATH
 # protoc to path
