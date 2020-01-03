@@ -153,10 +153,6 @@ let g:ale_fixers = {
 let g:ale_linters = {
 \ 'javascript': ['tslint'],
 \}
-" let g:ale_pattern_options = {
-" \ '.*\.ts$': {'ale_enabled': 1},
-" \ '.*\.tsx$': {'ale_enabled': 1},
-" \}
 
 " Tell vim to remember certain things when we exit
 "  '10  :  marks will be remembered for up to 10 previously edited files
@@ -190,7 +186,7 @@ set backupcopy=no
 " augroup is used to prevent a buildup of autocmd's whenever .vimrc is sourced
 augroup autocmds
   autocmd FileType go setlocal shiftwidth=2 softtabstop=0 tabstop=2 noexpandtab
-  autocmd BufNewFile,BufRead *.ts,*.tsx setlocal filetype=typescript.tsx
+  autocmd BufNewFile,BufRead *.ts,*.tsx,*.mdx setlocal filetype=typescript.tsx
   autocmd BufNewFile,BufRead *.build_defs,*.plz setlocal filetype=python.py
   set cole=0
   autocmd FileType * setl cole=0
