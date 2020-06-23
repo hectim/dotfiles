@@ -185,7 +185,6 @@ set backupcopy=no
 
 " augroup is used to prevent a buildup of autocmd's whenever .vimrc is sourced
 augroup autocmds
-  autocmd FileType go setlocal shiftwidth=2 softtabstop=0 tabstop=2 noexpandtab
   autocmd BufNewFile,BufRead *.ts,*.tsx,*.mdx setlocal filetype=typescript.tsx
   autocmd BufNewFile,BufRead *.build_defs,*.plz setlocal filetype=python.py
   set cole=0

@@ -107,6 +107,5 @@ if [ -f '/Users/bready/Documents/google-cloud-sdk/completion.zsh.inc' ]; then so
 # code servers
 # ssh c.sgu
 
-alias git=git
 alias gitp=git       # seriously this is insane
 alias gi=git         # seriously this is insane
