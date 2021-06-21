@@ -183,6 +183,20 @@ colorscheme iceberg
 " attempt
 set backupcopy=no
 
+" remember edits in the file after closing it
+" make sure that an undo dir exists
+" consider adding a crontab to delete them every 90 days of not being touched
+" # m h  dom mon dow   command
+" 43 00 *   *   3     find ~/.vim/undo-dir -type f -mtime +90 -delete
+if !isdirectory($HOME."/.vim")
+  call mkdir($HOME."/.vim", "", 0770)
+endif
+if !isdirectory($HOME."/.vim/undo-dir")
+  call mkdir($HOME."/.vim/undo-dir", "", 0700)
+endif
+set undodir=~/.vim/undo-dir
+set undofile
+
 " augroup is used to prevent a buildup of autocmd's whenever .vimrc is sourced
 augroup autocmds
   autocmd BufNewFile,BufRead *.ts,*.tsx,*.mdx setlocal filetype=typescript.tsx
@@ -194,5 +208,5 @@ augroup autocmds
   " Requires: https://chrome.google.com/webstore/detail/markdown-preview-plus/febilkbfcbhebfnokafefeacimjdckgl
   " Check "Allow access to file URLs in chrome://extensions
   autocmd BufEnter *.md exe 'noremap <F5> :!open -a "Google Chrome" %:p:.<CR>'
-  autocmd FileType cpp,cc setlocal commentstring=\/\/\ %s
+  autocmd FileType cpp,cc,proto setlocal commentstring=\/\/\ %s
 augroup END

@@ -1,3 +1,4 @@
+export NAMESPACE=brady-killeen
 #default tmux load
 # [[ $TERM != "screen" ]] && exec tmux
 # Source Prezto.
@@ -15,8 +16,10 @@ eval $(thefuck --alias)
 
 # go to path
 export GOPATH=$HOME/go
+export MODPATH=$HOME/gomod
 export GOBIN=$GOPATH/bin
-export PATH=$HOME/bin:/usr/local/bin:/usr/local/lib/node_modules:/usr/local/bin/sh:/usr/local/lib:/usr/local/sbin:/usr/local/lib/node_modules:$GOBIN:~/.please:/usr/local/opt:$PATH
+export GOROOT="$(brew --prefix golang)/libexec"
+export PATH=$HOME/bin:/usr/local/bin:/usr/local/lib/node_modules:/usr/local/bin/sh:/usr/local/lib:/usr/local/sbin:/usr/local/lib/node_modules:$GOBIN:~/.please:/usr/local/opt:$GOPATH/bin:$GOROOT/bin:$PATH
 
 # protoc to path
 export LD_LIBRARY_PATH=/usr/local/lib

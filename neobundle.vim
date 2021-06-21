@@ -52,13 +52,14 @@ NeoBundle 'w0rp/ale'
 " Other
 NeoBundle 'godlygeek/tabular'
 
-" Utils
+" Utils -- Tim Pope you delicious delicious man
 NeoBundle 'luochen1990/rainbow'
 NeoBundle 'tpope/vim-commentary' " gc for commenting sections
 NeoBundle 'tpope/vim-repeat'     " smarter dot command
 NeoBundle 'tpope/vim-fugitive'   " git wrapper in vim
 NeoBundle 'tpope/vim-surround'   " cs/ds quote manipulation
 NeoBundle 'tpope/vim-sleuth'     " detect indent
+NeoBundle 'tpope/vim-abolish'    " case preserving replace + other shit
 NeoBundle 'shumphrey/fugitive-gitlab.vim' " gitlab plugin for vim-fugitive
 let g:fugitive_gitlab_domains = ['http://git', 'http://git.tcncloud.net'] " for private gitlab domains
 
