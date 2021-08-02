@@ -242,7 +242,7 @@ function prompt_garrett_preprompt_render() {
 
   # Newline + Prompt line 1 (set above PROMPT, below).
   #print -P '\n${prompt_garrett_altchar_enable}${prompt_garrett_color_prompt}${prompt_garrett_upper_left_corner}( ${prompt_garrett_pwd}${git_info[remote_status]}${git_info[prompt_info]}${git_info[local_status]}${git_info[sha]} ${prompt_garrett_color_prompt})${prompt_garrett_altchar_enter}${(e)prompt_garrett_space}${prompt_garrett_altchar_leave}( ${ruby_info[version]}${prompt_garrett_location}${prompt_garrett_color_prompt} )${prompt_garrett_upper_right_corner}'
-  print -P '\n${prompt_garrett_altchar_enable}${prompt_garrett_color_prompt}${prompt_garrett_upper_left_corner}ᑕ ${prompt_garrett_pwd}${git_info[remote_status]}${git_info[prompt_info]}${git_info[local_status]}${git_info[sha]} ${prompt_garrett_color_prompt}ᑐ${prompt_garrett_altchar_enter}${(e)prompt_garrett_space}${prompt_garrett_altchar_leave}ᑕ ${node_info[version]}${prompt_garrett_location}${prompt_garrett_color_prompt} ᑐ${prompt_garrett_upper_right_corner}'
+  print -P '\n${prompt_garrett_altchar_enable}${prompt_garrett_color_prompt}${prompt_garrett_upper_left_corner}⊏ ${prompt_garrett_pwd}${git_info[remote_status]}${git_info[prompt_info]}${git_info[local_status]}${git_info[sha]} ${prompt_garrett_color_prompt}⊐${prompt_garrett_altchar_enter}${(e)prompt_garrett_space}${prompt_garrett_altchar_leave}⊏ ${node_info[version]}${prompt_garrett_location}${prompt_garrett_color_prompt} ⊐${prompt_garrett_upper_right_corner}'
 }
 
 # Configure the prompt.
@@ -420,7 +420,7 @@ function prompt_garrett_setup {
   # zstyle ':prezto:module:editor:info:keymap:primary' format "${red}â±%(?.${prompt_garrett_color_prompt}.${red})â±â± "
 
   # eggplant
-  zstyle ':prezto:module:editor:info:keymap:primary' format "ᑕ "
+  zstyle ':prezto:module:editor:info:keymap:primary' format "⊏ "
 
   # Vim insert mode.
   # zstyle ':prezto:module:editor:info:keymap:primary:insert' format "${red}I "
@@ -467,7 +467,7 @@ function prompt_garrett_setup {
 
   # Left prompt; base shell level.
   if (( $SHLVL == 1 )); then
-    export PROMPT='${prompt_garrett_altchar_enable}${prompt_garrett_color_prompt}${prompt_garrett_lower_left_corner}${editor_info[keymap]}'
+    export PROMPT='${prompt_garrett_altchar_enable}${prompt_garrett_color_prompt}${prompt_garrett_lower_left_corner}${editor_info[keymap]}⊏ '
 
   # Left prompt; nested shell level.
   else
@@ -475,7 +475,7 @@ function prompt_garrett_setup {
   fi
 
   # Right prompt.
-  export RPROMPT='${_prompt_showSpotifyStatus} ${prompt_garrett_current_time} %(?.${prompt_garrett_color_prompt}.)ᑐ${prompt_garrett_color_prompt}${prompt_garrett_lower_right_corner}'
+  export RPROMPT='${_prompt_showSpotifyStatus} ${prompt_garrett_current_time} %(?.${prompt_garrett_color_prompt}.)⊐${prompt_garrett_color_prompt}${prompt_garrett_lower_right_corner}'
 
   # Continuation prompt.
   export PROMPT2='(%_) ${editor_info[keymap]}'

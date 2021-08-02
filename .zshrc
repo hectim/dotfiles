@@ -30,17 +30,6 @@ alias chrome="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome"
 export PATH=$HOME/.please/:$PATH
 source <(plz --completion_script)
 
-# gcloud to path
-# source /Users/colton/google-cloud-sdk/path.zsh.inc
-# gcloud zsh completiton
-
-# autoload -U compinit compdef
-# compinit
-# autoload -Uz promptinit
-# promptinit
-
-# source /Users/colton/google-cloud-sdk/completion.zsh.inc
-
 # add homebrew to the completion path
 fpath=("/usr/local/bin/" $fpath)
 
@@ -101,14 +90,14 @@ alias count='ls -l | wc -l' # count how many ls entries are returned
 alias start='npm start'     # common usecase
 alias devdb='kubectl exec admin-0 -it psql -- -h skunkdb -U skunk -W skunk'
 
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/bready/Documents/google-cloud-sdk/path.zsh.inc' ]; then source '/Users/bready/Documents/google-cloud-sdk/path.zsh.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '/Users/bready/Documents/google-cloud-sdk/completion.zsh.inc' ]; then source '/Users/bready/Documents/google-cloud-sdk/completion.zsh.inc'; fi
-
 # code servers
 # ssh c.sgu
 
 alias gitp=git       # seriously this is insane
 alias gi=git         # seriously this is insane
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/brady.killeen/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/brady.killeen/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/brady.killeen/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/brady.killeen/google-cloud-sdk/completion.zsh.inc'; fi

@@ -144,3 +144,6 @@
 	smudge = git-lfs smudge -- %f
 [pull]
 	rebase = false
+[blame]
+  date = human
+  showname = false
