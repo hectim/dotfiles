@@ -471,18 +471,19 @@ function prompt_garrett_setup {
 
   # Left prompt; nested shell level.
   else
-    export PROMPT='${prompt_garrett_color_prompt}${prompt_garrett_lower_left_corner}( ${cyan}$SHLVL ${prompt_garrett_color_prompt}) ${editor_info[keymap]}'
+    export PROMPT='${prompt_garrett_altchar_enable}${prompt_garrett_color_prompt}${prompt_garrett_lower_left_corner}${editor_info[keymap]}⊏ '
+    # export PROMPT='${prompt_garrett_color_prompt}${prompt_garrett_lower_left_corner}( ${cyan}$SHLVL ${prompt_garrett_color_prompt}) ${editor_info[keymap]}'
   fi
 
   # Right prompt.
   export RPROMPT='${_prompt_showSpotifyStatus} ${prompt_garrett_current_time} %(?.${prompt_garrett_color_prompt}.)⊐${prompt_garrett_color_prompt}${prompt_garrett_lower_right_corner}'
 
   # Continuation prompt.
-  export PROMPT2='(%_) ${editor_info[keymap]}'
+  # export PROMPT2='(%_) ${editor_info[keymap]}'
 
   # Selection prompt.
-  export PROMPT3='
-(?) ${editor_info[keymap]}'
+  # export PROMPT3='
+# (?) ${editor_info[keymap]}'
 
   # Execution trace prompt.
   export PROMPT4='${yellow}+${blue}%N ${green}@${magenta}%i ${reset_color}'

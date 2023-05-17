@@ -12,7 +12,7 @@ source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 # export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=white'
 
 # homebrew install thefuck
-eval $(thefuck --alias)
+eval $(thefuck --alias --enable-experimental-instant-mode)
 
 # go to path
 export GOPATH=$HOME/go
@@ -88,7 +88,11 @@ alias v='f -e vim'          # nice filesystem search to open vim
 alias rm='rm -f'            # when I hit return, I expect a response not a question
 alias count='ls -l | wc -l' # count how many ls entries are returned
 alias start='npm start'     # common usecase
-alias devdb='kubectl exec admin-0 -it psql -- -h skunkdb -U skunk -W skunk'
+alias skunkdb='kubectl exec -n default admin-0 -it -- psql -h skunkdb -U skunk -W skunk'
+alias matrixdb='kubectl exec -n default admin-0 -it -- psql -h matrix-db -d omni -U omni'
+
+export USE_GKE_GCLOUD_AUTH_PLUGIN=True
+
 
 # code servers
 # ssh c.sgu

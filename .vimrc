@@ -138,10 +138,13 @@ vmap <Leader>a<Bar>  :Tabularize /<Bar><CR>
 nmap <silent> <C-e> <Plug>(ale_previous_wrap)
 nmap <silent> <C-r> <Plug>(ale_next_wrap)
 
+nmap <silent> <C-b> :call JsBeautify()<CR>
+
+let g:go_fmt_command = "gofmt"
 " gopls is annoying sometimes
 let g:go_null_module_warning = 0
 
-" Javascript linting
+" Javascript/go linting
 let g:ale_lint_on_text_changed = 'never'
 let g:ale_sign_column_always = 1
 let g:ale_fix_on_save = 0
@@ -152,7 +155,11 @@ let g:ale_fixers = {
 \}
 let g:ale_linters = {
 \ 'javascript': ['tslint'],
+\ 'go': ['revive'],
 \}
+
+let g:fugitive_gitlab_domains = ['https://git.tcncloud.net']
+let g:gitlab_api_keys = {'gitlab.com': 'fgMqfTo_4b6QzxAshq1S'}
 
 " Tell vim to remember certain things when we exit
 "  '10  :  marks will be remembered for up to 10 previously edited files
@@ -199,6 +206,7 @@ set undofile
 
 " augroup is used to prevent a buildup of autocmd's whenever .vimrc is sourced
 augroup autocmds
+  autocmd FileType go setlocal shiftwidth=2 softtabstop=0 tabstop=2 noexpandtab
   autocmd BufNewFile,BufRead *.ts,*.tsx,*.mdx setlocal filetype=typescript.tsx
   autocmd BufNewFile,BufRead *.build_defs,*.plz setlocal filetype=python.py
   set cole=0

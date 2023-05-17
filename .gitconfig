@@ -118,9 +118,9 @@
   # the usual default is to push all branches
   default = upstream
 [core]
-  autocrlf = false
   editor = vim
   excludesfile = ~/gitignore_global
+  safecrlf = false # https://stackoverflow.com/questions/24763948/git-warning-lf-will-be-replaced-by-crlf
 [advice]
   statusHints = false
 [diff]
@@ -146,4 +146,3 @@
 	rebase = false
 [blame]
   date = human
-  showname = false
