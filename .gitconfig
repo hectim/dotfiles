@@ -146,3 +146,9 @@
 	rebase = false
 [blame]
   date = human
+[url "git@gitlab.com:"]
+	insteadOf = https://gitlab.com/
+[url "git@github.com:"]
+	insteadOf = https://github.com/
+[url "git@git.tcncloud.net:"]
+	insteadOf = https://git.tcncloud.net/

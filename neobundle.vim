@@ -41,7 +41,7 @@ NeoBundle 'mxw/vim-jsx'
 NeoBundle 'maksimr/vim-jsbeautify'
 
 " Go
-NeoBundle 'fatih/vim-go', {'autoload':{'filetypes':['go']}, 'do': ':GoUpdateBinaries'}
+" NeoBundle 'fatih/vim-go', {'autoload':{'filetypes':['go']}, 'do': ':GoUpdateBinaries'}
 
 " Typescript
 NeoBundle 'leafgarland/typescript-vim'

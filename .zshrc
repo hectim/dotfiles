@@ -105,3 +105,7 @@ if [ -f '/Users/brady.killeen/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/b
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/brady.killeen/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/brady.killeen/google-cloud-sdk/completion.zsh.inc'; fi
+
+# Created by `pipx` on 2024-03-14 17:59:54
+export PATH="$PATH:/Users/brady.killeen/.local/bin"
+source ~/.tcnrc
