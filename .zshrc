@@ -90,6 +90,10 @@ alias count='ls -l | wc -l' # count how many ls entries are returned
 alias start='npm start'     # common usecase
 alias skunkdb='kubectl exec -n default admin-0 -it -- psql -h skunkdb -U skunk -W skunk'
 alias matrixdb='kubectl exec -n default admin-0 -it -- psql -h matrix-db -d omni -U omni'
+alias 303db='kubectl exec -n default admin-0 -it -- psql -h matrix-db -d room303 -U room303'
+alias deliverydb='kubectl exec -n default admin-0 -it -- psql -h matrix-db -d delivery -U delivery'
+alias notifydb='kubectl exec -n default admin-0 -it -- psql -h matrix-db -d notify -U notify'
+alias newsroomdb='kubectl exec -n default admin-0 -it -- psql -h matrix-db -d newsroom -U newsroom'
 
 export USE_GKE_GCLOUD_AUTH_PLUGIN=True
 
