@@ -94,6 +94,10 @@ alias 303db='kubectl exec -n default admin-0 -it -- psql -h matrix-db -d room303
 alias deliverydb='kubectl exec -n default admin-0 -it -- psql -h matrix-db -d delivery -U delivery'
 alias notifydb='kubectl exec -n default admin-0 -it -- psql -h matrix-db -d notify -U notify'
 alias newsroomdb='kubectl exec -n default admin-0 -it -- psql -h matrix-db -d newsroom -U newsroom'
+alias devclone='~/documents/devclone/devclone'
+alias c='cursor'
+# for anthony
+# alias "='osascript -e '\''tell app "System Events" to display dialog "For real dude" with title "Anthony GTFO"'\'''
 
 export USE_GKE_GCLOUD_AUTH_PLUGIN=True
 
