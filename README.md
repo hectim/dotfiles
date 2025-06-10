@@ -2,6 +2,7 @@
 
 + iterm
 + neobundle
++ thefuck
 + zsh
   * [install zsh autosuggest](https://github.com/zsh-users/zsh-autosuggestions)
 + zprezto
