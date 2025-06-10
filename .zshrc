@@ -32,7 +32,8 @@ export PATH=$HOME/.please/:$PATH
 # source <(plz --completion_script)
 
 # add homebrew to the completion path
-fpath=("/usr/local/bin/" $fpath)
+fpath=("/usr/local/bin/" $fpath)   # intel osx
+fpath=("/opt/homebrew/bin" $fpath) # arm osx
 
 # protoc to path
 export LD_LIBRARY_PATH=/usr/local/lib
@@ -84,6 +85,7 @@ bindkey 'kk' autosuggest-accept
 bindkey 'jj' autosuggest-execute
 bindkey 'hh' forward-word
 
+alias ls='ls --color'       # zsh to show directoires differently
 alias lsd='ls -a'           # because I mistype this all the time
 alias v='f -e vim'          # nice filesystem search to open vim
 alias rm='rm -f'            # when I hit return, I expect a response not a question
@@ -109,12 +111,21 @@ export USE_GKE_GCLOUD_AUTH_PLUGIN=True
 alias gitp=git       # seriously this is insane
 alias gi=git         # seriously this is insane
 
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/brady.killeen/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/brady.killeen/google-cloud-sdk/path.zsh.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '/Users/brady.killeen/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/brady.killeen/google-cloud-sdk/completion.zsh.inc'; fi
-
 # Created by `pipx` on 2024-03-14 17:59:54
 export PATH="$PATH:/Users/brady.killeen/.local/bin"
 # source ~/.tcnrc
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/brady.killeen/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/brady.killeen/Downloads/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/brady.killeen/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/brady.killeen/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
+
+# got sick of trying to modify zprezto with the unwieldy prompt modifications
+# so I just wrote my own imple on that gets the job done
+# theme required or looks like shit sadly
+autoload -Uz vcs_info
+precmd() { vcs_info }
+zstyle ':vcs_info:git:*' formats '%b '
+setopt PROMPT_SUBST
+PROMPT='%F{green}%*%f %F{blue}%2/%f %F{red}${vcs_info_msg_0_}%f$ '

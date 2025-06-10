@@ -2,14 +2,14 @@
 
 FILES=(
   ~/.vimrc
-  ~/.vim/colors/iceberg.vim
+  # ~/.vim/colors/iceberg.vim
   ~/.vim/neobundle.vim
-  ~/.zpreztorc
+  ~/.zprofile
   ~/.zshrc
-  ~/.zprezto/modules/prompt/functions/prompt_garrett_setup
+  # ~/.zprezto/modules/prompt/functions/prompt_garrett_setup
   ~/.gitignore_global
   ~/.gitconfig
-  ~/Library/Preferences/com.googlecode.iterm2.plist
+  # ~/Library/Preferences/com.googlecode.iterm2.plist
 )
 
 mkdir -p local-backup                                     # make backup folder
