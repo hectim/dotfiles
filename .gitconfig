@@ -137,11 +137,6 @@
 [user]
 	name = Brady Killeen
 	email = brady.killeen@tcnbroadcasting.com
-[filter "lfs"]
-	process = git-lfs filter-process
-	required = true
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
 [pull]
 	rebase = false
 [blame]
@@ -152,3 +147,8 @@
 	insteadOf = https://github.com/
 [url "git@git.tcncloud.net:"]
 	insteadOf = https://git.tcncloud.net/
+[filter "lfs"]
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f

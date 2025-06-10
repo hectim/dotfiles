@@ -22,6 +22,7 @@ NeoBundle 'nathanaelkane/vim-indent-guides'
   "let g:indent_guides_auto_colors = 0
   "autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=black ctermbg=0 " black
   "autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=black ctermbg=8 " darkgray
+NeoBundle 'cocopon/iceberg.vim'
 NeoBundle 'itchyny/lightline.vim' " colorscheme
 NeoBundle 'airblade/vim-gitgutter'
 NeoBundle 'ntpeters/vim-better-whitespace' " whitespace
